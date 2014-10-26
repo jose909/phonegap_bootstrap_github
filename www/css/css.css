@@ -1,0 +1,18 @@
+ 
+ @font-face {
+                    font-family: miPrimeraFuente;
+                    src: url(front/kaushanscript-regular-webfont.ttf);
+                    src: url(front/Boogaloo-Regular.otf);
+                    }
+div {
+      font-family:miPrimeraFuente;
+      }
+p {
+    font-family:miPrimeraFuente;
+    color: #000000;
+    } 
+body{
+      
+      background-color: #d2d1b1;
+      
+     }

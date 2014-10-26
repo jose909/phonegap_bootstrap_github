@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Unable to zooming device-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>Joss'Olivares</title>
+        <link rel="stylesheet" type="text/css" href="../css/css.css">
+        <link rel="stylesheet"  href="../css/img.css"/>
+       <style type="text/css">
+            
+       </style> 
+        <script  src="../js/jquery.js" ></script>
+        <link rel="stylesheet"  type="text/css"  href="../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet"  type="text/css"  href="../bootstrap/css/bootstrap-theme.min.css">
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+
+        <link rel="stylesheet"  type="text/css"  href="../table/bootstrap-table.css">
+        <script src="../table/bootstrap-table.js"></script>
+
+    <script type="text/javascript">
+            $(document).ready(function() {        
+                          webdata();
+                                }); 
+        
+         function webdata() {      
+                  var nombre = $("#nombre");
+                  var descripcion = $("#descripcion");
+                  var precio = $("#precio");
+                  var imagen = $("#imagen");
+                  $.getJSON("http://127.0.0.1:8000/ws/productos/", function(json){
+                    $.each(json, function(fields,data){
+                      console.log(data);  
+                      console.log(fields); 
+                    nombre.append("<li><h3><td>" + data.fields.nombre +"<td>");  
+                    descripcion.append("<li><h3><td>" + data.fields.descripcion +"<td>");
+                    precio.append("<li><td><h3><td>" + data.fields.precio +"<td></li>");
+                    imagen.append("<li><td><img  src='http://127.0.0.1:8000/media/" + data.fields.imagen +"'width=50px heigth=50px'/></td></li>");
+                
+                    
+                    });      
+                    
+                    });  
+                    
+                    } 
+     </script>
+        
+    </head>
+    <body>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="table-responsive">
+              <table class ="table">
+                <theader>
+                    <tr>
+                      <th>Nombre</th>
+                      <th>Descripcion</th>
+                      <th>Precio</th>
+                      <th>Imagen</th>
+                    </tr>
+                </theader>
+                  <body>
+                    <tr>
+                      <td id="nombre" ><p>eee</p>aaa</td>
+                      <td id="descripcion"></td>
+                      <td id="precio"></td>
+                      <td id="imagen"  class="img-responsive" alt="Responsive image"></td>
+                    </tr> 
+                  </body>
+              </table>
+          </div> 
+         </div>   
+        </div>
+   </div>
+
+
+
+
+
+
+    </body>
+</html> 

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Unable to zooming device-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>Joss'Olivares</title>
+        <link rel="stylesheet" type="text/css" href="../css/css.css">
+        <link rel="stylesheet"  href="../css/img.css"/>
+       <style type="text/css">
+            
+       </style> 
+        <script  src="../js/jquery.js" ></script>
+        <script  src="../js/json.js" ></script>
+        <link rel="stylesheet"  type="text/css"  href="../bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet"  type="text/css"  href="../bootstrap/css/bootstrap-theme.min.css">
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+
+       
+        
+
+
+        
+    </head>
+    <body>
+       
+        
+    
+
+
+        <nav class="navbar navbar-inverse" role="navigation">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="../index2.html">Joss'Olivares</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav" >
+                        <li class="active"><a href="gorros.html">Inicio</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Productos <span class="caret"></span></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a  href="#">Gorros</a></li>
+                            <li><a href="#">Bufandas</a></li>
+                            <li><a href="#">Pulseras y Collares</a></li>
+                            <li><a href="#">Ganchos</a></li>
+                            <li><a href="#">Colas</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Aretes</a></li>
+                          </ul>
+                        </li>      
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Acerca de </a></li>
+                    </ul>
+
+                    
+                  
+                <ul class="nav navbar-nav navbar-right">
+                   <button type="button" class="btn btn-default navbar-btn">Login</button>
+                   <button type="button" class="btn btn-default navbar-btn">Sign off</button>
+                </ul>
+
+
+                 
+                
+
+                   
+
+
+                
+              </div><!-- /.container-fluid -->
+        </nav><!-- end Nav -->
+
+       
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="../img/logo2.jpg" class="img-responsive" alt="test">
+            </div>
+        </div>
+    </div><!-- container imagen -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                 
+            </div>
+        </div>
+    </div></div><!-- container contenido -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          
+            <div class="table-responsive">
+                <table class ="table">
+                  <theader>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                      </tr>
+                  </theader>
+                    <body>
+                      <tr>
+                        <td id="DOM" ></td>
+                        <td id="imagens"></td>
+                        <td id="precio"></td>
+                        <td id="imagen"  class="img-responsive" alt="Responsive image"></td>
+                      </tr> 
+                    </body>
+                </table>
+            </div> 
+          
+         </div>   
+        </div>
+   </div>
+
+   <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img data-src="../img/logo2.jpg/100%x180" alt="...">
+      <td id="descripcion"></td>
+    </a>
+  </div>
+  ...
+</div>
+<button id="link">My video</button>
+<div id="link">My video</div>
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <iframe width="400" height="300" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+
+<script>
+    $('#link').click(function () {
+        var src='http://127.0.0.1:8000/media/';
+        $('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
+    });
+
+    $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+    });
+</script>
+
+
+
+
+
+
+
+    </body>
+</html> 
